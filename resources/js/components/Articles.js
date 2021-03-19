@@ -17,15 +17,15 @@ const Articles = () => {
         //eslint-disable-next-line
     },[]);
 
-   if(loading){
-       return <Spinner/>
-   }
-
    if(error){
     console.log(error)
     setAlert(error.response.statusText,'danger');
 }
 
+if(loading){
+    return <Spinner/>
+}
+else{
     return (
         <Fragment>
             <div>
@@ -35,6 +35,7 @@ const Articles = () => {
             </div>
         </Fragment>
     )
+}
 
 }
 
