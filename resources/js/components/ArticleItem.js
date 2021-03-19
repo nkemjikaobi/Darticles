@@ -28,6 +28,9 @@ const ArticleItem = ({ article }) => {
     if(loading){
         return <Spinner/>
     }
+    if(!loading && articles.length === 0 ){
+        return <p className='center'>No articles to show...</p>
+    }
 
     return (
         <div className='card card-body mb-3'>
