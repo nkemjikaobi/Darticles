@@ -11,7 +11,7 @@ const Articles = () => {
 
     const alertContext = useContext(AlertContext);
     const { setAlert } = alertContext;
-
+  
     useEffect(() => {
         getArticles();
         //eslint-disable-next-line
@@ -25,6 +25,14 @@ const Articles = () => {
 if(loading){
     return <Spinner/>
 }
+
+//Display no articles if articles array is empty
+if(!loading && articles.length === 0 ){
+   return <p className='center'>No articles to show...</p>
+}
+
+
+
 else{
     return (
         <Fragment>

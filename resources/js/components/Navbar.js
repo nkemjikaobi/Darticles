@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom';
 
 const Navbar = () => {
+    
     return (
         <Fragment>
             <nav className='navbar navbar-expand-sm navbar-dark bg-info mb-2'>
